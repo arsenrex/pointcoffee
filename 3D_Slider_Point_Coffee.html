@@ -1,0 +1,104 @@
+<!-- 3D Image Slideshow HTML -->
+<section class="slideshow">
+  <div class="content">
+    <div class="slider-content">
+       <figure class="shadow"><img src="https://i.postimg.cc/V6LJBMRg/trained-barista-1080x608x30dpl.png"></figure>
+       <figure class="shadow"><img src="https://i.postimg.cc/6pJTbFcy/upsize-banner-1080x608x30dpl.png"></figure>
+       <figure class="shadow"><img src="https://i.postimg.cc/V6LJBMRg/trained-barista-1080x608x30dpl.png"></figure>
+       <figure class="shadow"><img src="https://i.postimg.cc/j5gL853b/high-quality-standard-1080x608x30dpl.png"></figure>
+       <figure class="shadow"><img src="https://i.postimg.cc/wTSs81qx/grab-and-go-1080x608x30dpl.png"></figure>
+       <figure class="shadow"><img src="https://i.postimg.cc/xjZXMXbG/fresh-quality-1080x608x30dpl.png"></figure>
+       <figure class="shadow"><img src="https://i.postimg.cc/ZqmBnXv1/free-delivery-1080x608x30dpl.png"></figure>
+       <figure class="shadow"><img src="https://i.postimg.cc/V6LJBMRg/trained-barista-1080x608x30dpl.png"></figure>
+       <figure class="shadow"><img src="https://i.postimg.cc/V6LJBMRg/trained-barista-1080x608x30dpl.png"></figure>
+       <figure class="shadow"><img src="https://i.postimg.cc/V6LJBMRg/trained-barista-1080x608x30dpl.png"></figure>
+    </div>
+  </div>
+</section>
+<!-- End 3D Image Slideshow HTML -->
+<style>
+.slideshow{
+  perspective: 800px;
+  padding: 200px;
+}
+.content{
+  margin: auto;
+  width: 180px;
+  perspective: 1000px;
+  position:relative;
+  padding-top: 0px;
+  transform-style: preserve-3d;
+}
+.slider-content{
+  width: 100%;
+  position:absolute;
+  float:right;
+  animation: rotate 30s infinite linear;
+  transform-style: preserve-3d;
+}
+.slider-content:hover{
+  cursor: pointer;
+  animation-play-state: paused;
+}
+
+.slider-content figure{
+  width:180px;
+  height:120px;
+  border:1px solid #fff;
+  overflow:hidden;
+  position:absolute;
+}
+.slider-content figure:nth-child(1){
+  transform:rotateY(0deg) translateZ(300px);
+}
+.slider-content figure:nth-child(2){
+  transform:rotateY(40deg) translateZ(300px);
+}
+.slider-content figure:nth-child(3){
+  transform:rotateY(80deg) translateZ(300px);
+}
+.slider-content figure:nth-child(4){
+  transform:rotateY(120deg) translateZ(300px);
+}
+.slider-content figure:nth-child(5){
+  transform:rotateY(160deg) translateZ(300px);
+}
+.slider-content figure:nth-child(6){
+  transform:rotateY(200deg) translateZ(300px);
+}
+.slider-content figure:nth-child(7){
+  transform:rotateY(240deg) translateZ(300px);
+}
+.slider-content figure:nth-child(8){
+  transform:rotateY(280deg) translateZ(300px);
+}
+.slider-content figure:nth-child(9){
+  transform:rotateY(320deg) translateZ(300px);
+}
+
+.shadow{
+  position: absolute;
+  box-shadow: 0px 0px 0px #000;
+ 
+}
+.slider-content img{
+  image-rendering: auto;
+  transition: all 400ms;
+  width: 100%;
+  height: 100%;
+}
+.slider-content img:hover{
+  transform: scale(1.2);
+  transition: all 400ms;
+ 
+}
+
+@keyframes rotate {
+  from{
+    transform: rotateY(0deg);
+  }
+  to{
+      transform: rotateY(250deg);
+  }
+}
+</style>
